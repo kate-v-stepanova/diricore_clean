@@ -1,8 +1,9 @@
 # diricore
 
-There are 2 main scripts:
+There are 3 main scripts:
 1. `subsequence_analysis.sh`
 2. `rpf_density_analysis.sh`
+3. `plot_rpf_transcript_distribution.sh`
 
 To run them, the paths specified in the scripts have to be changed to the correct ones.
 
@@ -51,4 +52,3 @@ Diricore supports 3 types of genomes:
 2. Run RPF density analysis: `rpf_density_analysis.sh 20252 mm10 25 all_unique`
 3. Run Subsequence analysis: `subsequence_analysis.sh 20252 mm10 25 all_unique`
 4. After the RPF density analysis is done, plot transcript distribution: `plot_rpf_transcript_distribution.sh 20252 mm9 25 all_unique`
-
