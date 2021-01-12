@@ -7,6 +7,16 @@ There are 3 main scripts:
 
 To run them, the paths specified in the scripts have to be changed to the correct ones.
 
+## Set up
+
+Diricore runs on python 2.7
+1. Create a virtual environment, e.g. conda (https://docs.conda.io/) : `conda create -n diricore python=2.7`
+2. Activate virtual environment: `conda activate diricore` or `source activate diricore`
+3. Install requirements: `pip install -r requirements.txt`
+
+Before running diricore, the virtual environment has to be activated.
+
+
 ## Input files
 It is required to have the following input files:
 
@@ -44,11 +54,13 @@ Diricore supports 3 types of genomes:
 2. Mouse (mm10)
 3. Yeast
 
-# Workflow
+## Workflow
 0. THE most important step: change all the directories in the script. 
 1. Align raw data with any aligner of choice, e.g. STAR
   * For human, use this genome version: https://www.gencodegenes.org/human/release_19.html
   * For mouse, use this genome version: https://www.ensembl.org/Mus_musculus/Info/Index 
-2. Run RPF density analysis: `rpf_density_analysis.sh 20252 mm10 25 all_unique`
-3. Run Subsequence analysis: `subsequence_analysis.sh 20252 mm10 25 all_unique`
-4. After the RPF density analysis is done, plot transcript distribution: `plot_rpf_transcript_distribution.sh 20252 mm9 25 all_unique`
+  * Yeast - I never run it for yeast, so don't know which genome to use. 
+2. Activate virtual environment: `source activate diricore` or `conda activate diricore`
+3. Run RPF density analysis: `rpf_density_analysis.sh 20252 mm10 25 all_unique`
+4. Run Subsequence analysis: `subsequence_analysis.sh 20252 mm10 25 all_unique`
+5. After the RPF density analysis is done, plot transcript distribution: `plot_rpf_transcript_distribution.sh 20252 mm9 25 all_unique`
